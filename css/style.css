@@ -1,0 +1,511 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    width: 70%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+aside#sidebar {
+    width: 30%;
+    float: right;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #ddd;
+}
+
+#search-area, #word-of-the-day, #results-area {
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+/* Word of the Day Styling */
+#word-of-the-day {
+    background-color: #e9f5ff; /* Light blue background */
+    border-left: 5px solid #007bff; /* Blue accent border */
+}
+
+#word-of-the-day h2 {
+    color: #0056b3; /* Darker blue for the heading */
+    margin-bottom: 10px;
+}
+
+#wotd-content h3 {
+    color: #333;
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+#wotd-content p {
+    margin: 4px 0;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+#wotd-content strong {
+    color: #0056b3;
+}
+
+#wotd-audio-btn { /* Specific styling for WOTD audio button if needed */
+    /* Example: make it slightly smaller or different color */
+    /* padding: 4px 8px; */
+    /* font-size: 11px; */
+}
+
+/* Browse by Alphabet Styling */
+#browse-alphabet-section {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    margin-bottom: 15px;
+}
+
+#browse-alphabet-section h2 {
+    color: #495057;
+    margin-bottom: 10px;
+}
+
+#alphabet-buttons {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.alphabet-btn {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.alphabet-btn:hover {
+    background-color: #5a6268;
+}
+
+#alphabet-results-area {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    min-height: 50px;
+}
+
+.alphabet-result-entry {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.alphabet-result-entry:last-child {
+    border-bottom: none;
+}
+
+.alphabet-result-entry h4 {
+    margin: 0 0 5px 0;
+    color: #007bff;
+}
+
+.alphabet-result-entry p {
+    margin: 3px 0;
+    font-size: 0.9em;
+}
+
+/* Bookmarking Styling */
+.bookmark-btn, .remove-bookmark-btn {
+    background-color: #ffc107; /* Yellow */
+    color: #212529; /* Dark gray */
+    border: 1px solid #dda700;
+    padding: 6px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 10px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.bookmark-btn:hover, .remove-bookmark-btn:hover {
+    background-color: #e0a800;
+}
+
+/* Style for when a word is already bookmarked (can be same as normal or slightly different) */
+/* We primarily handle the text change ("Bookmark" vs "Bookmarked") via JS */
+/* .bookmark-btn[disabled] { 
+    background-color: #6c757d; 
+    color: white;
+    cursor: not-allowed;
+} */
+
+#bookmarks-section {
+    background-color: #fffbe6; /* Light yellow background */
+    padding: 15px;
+    border: 1px solid #ffeeba; /* Yellow border */
+    margin-bottom: 15px;
+}
+
+#bookmarks-section h2 {
+    color: #856404; /* Dark yellow/brown for heading */
+    margin-bottom: 10px;
+}
+
+#bookmarked-words-list .bookmark-entry {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+#bookmarked-words-list .bookmark-entry h4 {
+    margin: 0 0 5px 0;
+    color: #007bff; /* Blue to match other titles */
+}
+
+#bookmarked-words-list .bookmark-entry p {
+    margin: 4px 0;
+    font-size: 0.9em;
+}
+
+/* Styling for Static Content Pages (About, Privacy, Terms, Contact) */
+.content-page {
+    background-color: #fff;
+    padding: 20px;
+    margin: 15px; /* Or use main's padding if preferred */
+    border: 1px solid #ddd;
+    line-height: 1.6;
+}
+
+.content-page h2 {
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.content-page h3 {
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.content-page p, .content-page ul {
+    margin-bottom: 15px;
+}
+
+.content-page ul {
+    padding-left: 20px;
+}
+
+.content-page a {
+    color: #007bff;
+}
+
+.content-page a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form Styling */
+#contact-form {
+    margin-top: 20px;
+}
+
+#contact-form div {
+    margin-bottom: 15px;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* So padding doesn't add to width */
+    font-family: sans-serif; /* Inherit body font */
+    font-size: 1em;
+}
+
+#contact-form textarea {
+    resize: vertical; /* Allow vertical resize, not horizontal */
+}
+
+.submit-btn { /* General submit button styling, can be reused */
+    background-color: #28a745; /* Green */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+.form-note {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+
+#results-area .result-entry {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px dashed #eee;
+    background-color: #f9f9f9;
+}
+
+#results-area .result-entry h3 {
+    margin-top: 0;
+    color: #555;
+}
+
+#results-area .result-entry p {
+    margin: 5px 0;
+}
+
+#results-area .result-entry strong {
+    color: #333;
+}
+
+.audio-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.audio-btn:hover {
+    background-color: #0056b3;
+}
+
+#ad-placeholder {
+    width: 300px;
+    height: 250px;
+    background-color: #bbb;
+    text-align: center;
+    line-height: 250px;
+    margin: 0 auto;
+}
+
+footer {
+    clear: both;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* --- Responsive Design --- */
+
+/* Mobile First - Base Styles (Implicit) */
+/* Consider base styles to be for smallest screens if starting from scratch.
+   Here, we are adapting existing styles. */
+
+/* Tablet and Larger (Default styles are effectively this breakpoint and up) */
+/* Styles outside media queries are for 769px and wider */
+
+/* Medium Screens / Tablets (e.g., <= 992px) */
+@media (max-width: 992px) {
+    main {
+        width: 65%; /* Give a bit more space to main content */
+    }
+    aside#sidebar {
+        width: 35%;
+    }
+    #ad-top-banner { /* Adjust top banner for slightly smaller screens if needed */
+        /* Example: width: 100%; max-width: 728px; height: auto; */
+        /* For fixed size, ensure it doesn't overflow. Current margin:auto helps. */
+    }
+}
+
+
+/* Small Screens / Mobile (e.g., <= 768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 0.8rem 0;
+    }
+    header h1 {
+        font-size: 1.5em; /* Slightly smaller for mobile */
+    }
+    header nav ul li {
+        display: block; /* Stack navigation links */
+        margin: 8px 0;
+    }
+
+    main, aside#sidebar {
+        width: 100%;
+        float: none;
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+    
+    .content-page {
+        margin: 10px; /* Reduce margin for content pages */
+        padding: 15px;
+    }
+
+    #search-area input[type="text"] {
+        width: calc(100% - 85px); /* Adjust search bar width considering button */
+        margin-bottom: 10px; /* Space if button wraps */
+    }
+    #search-area button {
+        width: 75px; /* Fixed width for search button */
+    }
+    
+    #alphabet-buttons {
+        justify-content: center; /* Center alphabet buttons if they wrap */
+    }
+    .alphabet-btn {
+        padding: 10px 10px; /* Slightly larger tap target */
+        font-size: 1em;
+    }
+
+    .bookmark-btn, .remove-bookmark-btn, .audio-btn, .submit-btn {
+        padding: 8px 12px; /* Ensure decent tap size */
+        font-size: 0.95em;
+    }
+    
+    #contact-form input[type="text"],
+    #contact-form input[type="email"],
+    #contact-form textarea {
+        padding: 12px; /* Larger tap area for form fields */
+    }
+
+    #ad-top-banner {
+        width: 100%; /* Allow banner to be responsive */
+        max-width: 320px; /* Common mobile banner width */
+        height: auto; /* Adjust height automatically or set to 50px for 320x50 */
+        min-height: 50px; /* For 320x50 ads */
+        line-height: 50px; /* If fixed height like 50px */
+    }
+    #ad-sidebar {
+        width: 100%;
+        max-width: 300px; /* Common mobile ad width */
+        height: auto; /* Adjust height automatically or set to 250px for 300x250 */
+        min-height: 250px;
+        margin: 15px auto; /* Center it */
+        line-height: initial; /* If using for placeholder text */
+    }
+    #ad-placeholder { /* In case this old ID is still used anywhere or for general placeholders */
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    footer ul li {
+        display: block; /* Stack footer links */
+        margin: 5px 0;
+    }
+    footer {
+        padding: 0.8rem 0;
+    }
+}
+
+/* Very Small Screens (e.g., <= 480px) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.3em;
+    }
+    body {
+        font-size: 15px; /* Slightly adjust base font for very small screens */
+    }
+    
+    #search-area input[type="text"] {
+        /* Ensure it doesn't get too small, allow stacking if necessary */
+        width: 100%; 
+        margin-bottom: 10px;
+    }
+    #search-area button {
+        width: 100%; /* Full width button */
+    }
+
+    .content-page h2 {
+        font-size: 1.4em;
+    }
+    .content-page h3 {
+        font-size: 1.2em;
+    }
+    
+    /* Further reduce padding on specific elements if needed */
+    #search-area, #word-of-the-day, #results-area, #browse-alphabet-section, #bookmarks-section, .content-page {
+        padding: 10px;
+    }
+    
+    .bookmark-btn, .remove-bookmark-btn, .audio-btn, .submit-btn {
+        padding: 10px 14px; /* Ensure good tap size */
+        width: auto; /* Allow them to size to content or set to 100% if desired */
+        display: inline-block; /* Ensure they are not full width unless intended */
+    }
+}
